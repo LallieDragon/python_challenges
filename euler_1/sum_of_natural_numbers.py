@@ -1,23 +1,25 @@
-# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-# Find the sum of all the multiples of 3 or 5 below 1000.
-def euler():
+def euler(number):
 	count = 0
 	score = 0
-	while count <= 1000:
-		if (count % 3 == 0) and (count % 5 == 0):
+	while count < number:
+		if (count % 15 == 0):
 			count = count + 1
 			score = score + count			
 
-		elif (count % 3):
+		elif (count % 3 == 0) and not (count % 5 == 0):
 			count = count + 1
-			score = score + count			
+			score = score + count 		
 			
-		elif (count % 5):
+		elif not (count % 5 == 0) and (count % 5 == 0):
 			count = count + 1
 			score = score + count
 			
+		else:
+			count = count + 1
+			score = score
+		
 	return score
 	
-print(euler())
+print(euler(1000))
 		
 			
