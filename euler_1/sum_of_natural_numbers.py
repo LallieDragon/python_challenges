@@ -1,24 +1,9 @@
 def euler(number):
-	count = 0
-	score = 0
-	while count < number:
-		if (count % 15 == 0):
-			count = count + 1
-			score = score + count			
-
-		elif (count % 3 == 0) and not (count % 5 == 0):
-			count = count + 1
-			score = score + count 		
-			
-		elif not (count % 5 == 0) and (count % 5 == 0):
-			count = count + 1
-			score = score + count
-			
-		else:
-			count = count + 1
-			score = score
-		
-	return score
+	total = 0
+	for i in range(number):
+		if (i % 3 == 0) or (i % 5 == 0):
+			total = total + i		
+	return total
 	
 print(euler(1000))
 		
