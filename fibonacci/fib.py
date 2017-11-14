@@ -1,7 +1,7 @@
 def fib(x):
-  i, j = 1, 1
-  for i in range(x-1):
-    i, j = j, i + j
-  return i
+  y, j = 1, 1
+  for i in range(x - 1):
+    y, j = j, y + j
+  return j
 
-print(fib(100))
+print(fib(6))
